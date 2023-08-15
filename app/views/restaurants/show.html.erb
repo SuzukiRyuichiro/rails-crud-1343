@@ -7,3 +7,8 @@
     ⭐️
   <% end %>
 </p>
+<%= link_to "Delete Restaurant",
+  restaurant_path(@restaurant),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+<%= link_to "Edit", edit_restaurant_path(@restaurant) %>

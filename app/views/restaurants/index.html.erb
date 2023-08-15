@@ -3,7 +3,7 @@
   <% @restaurants.each do |restaurant| %>
     <li>
       <h3>
-        <%= restaurant.name %>
+        <%= link_to restaurant.name, restaurant_path(restaurant) %>
       </h3>
       <p>📭 <%= restaurant.address %></p>
     </li>
