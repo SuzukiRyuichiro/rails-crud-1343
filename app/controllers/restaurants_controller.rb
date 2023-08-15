@@ -12,4 +12,8 @@ class RestaurantsController < ApplicationController
     # assign the instance to an instance variable
     @restaurant = Restaurant.find(id)
   end
+
+  def new
+    @restaurant = Restaurant.new
+  end
 end
