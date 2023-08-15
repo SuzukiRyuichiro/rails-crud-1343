@@ -4,4 +4,6 @@ class RestaurantsController < ApplicationController
     # assign that to an instance variable to pass it onto the view
     @restaurants = Restaurant.all
   end
+
+  def show; end
 end
