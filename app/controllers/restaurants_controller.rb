@@ -16,4 +16,19 @@ class RestaurantsController < ApplicationController
   def new
     @restaurant = Restaurant.new
   end
+
+  def create
+    strong_params = restaurant_params
+    restaurant = Restaurant.new(strong_params)
+    # save the instance to the DB
+    restaurant.save
+
+    redirect_to restaurant_path(restaurant.id)
+  end
+
+  private
+
+  def restaurant_params
+    params.require(:restaurant).permit(:name, :rating, :address)
+  end
 end
