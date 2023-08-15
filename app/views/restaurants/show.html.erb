@@ -1,1 +1,9 @@
-<h1>I'm in show!</h1>
+<h1>📛 <%= @restaurant.name %></h1>
+<h3>
+  📭 <%= @restaurant.address %>
+</h3>
+<p>
+  <% @restaurant.rating.times do %>
+    ⭐️
+  <% end %>
+</p>

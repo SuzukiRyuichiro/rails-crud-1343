@@ -5,5 +5,11 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
   end
 
-  def show; end
+  def show
+    # get the id in the URL
+    id = params[:id]
+    # get the instance of the restaurant with the id
+    # assign the instance to an instance variable
+    @restaurant = Restaurant.find(id)
+  end
 end
